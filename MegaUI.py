@@ -261,7 +261,7 @@ class MegaWindow(QtGui.QMainWindow):
     
         # Button
         self.browseButton = QtGui.QPushButton(self.browseTab)
-        self.browseButton.release.connect(self.Browse)
+        self.browseButton.released.connect(self.Browse)
         self.browseLayout.addWidget(self.browseButton)
 
         self.browseTab.setLayout(self.browseLayout)
@@ -276,7 +276,7 @@ class MegaWindow(QtGui.QMainWindow):
         self.stopGoLayout = QtGui.QHBoxLayout()
 
         self.startButton = QtGui.QPushButton()
-        self.startButton.release.connect(self.Run)
+        self.startButton.released.connect(self.Run)
         self.stopGoLayout.addWidget(self.startButton)
 
         self.haltButton = QtGui.QPushButton() 
