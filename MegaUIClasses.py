@@ -8,7 +8,7 @@ class QHexSpinBox(QtGui.QDoubleSpinBox):
 
     class HexValidator(QtGui.QValidator):
         def __init__(self, min, max, parent=None):
-            QtGui.QValidator.__init__(self)
+            QtGui.QValidator.__init__(self, parent)
             self.valid = set('0123456789abcdef')
             self.min = min
             self.max = max
@@ -33,7 +33,7 @@ class QHexSpinBox(QtGui.QDoubleSpinBox):
 
     class DecValidator(QtGui.QValidator):
         def __init__(self, min, max, parent=None):
-            QtGui.QValidator.__init__(self)
+            QtGui.QValidator.__init__(self, parent)
             self.valid = set('0123456789')
             self.min = min
             self.max = max
